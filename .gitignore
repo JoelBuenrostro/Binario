@@ -1,0 +1,68 @@
+# Este archivo contiene una lista de archivos y directorios que Git ignorará en este proyecto.
+# Se han incluido patrones comunes para un proyecto que utiliza el stack MERN (MongoDB, Express, React, Node.js)
+# en un entorno de monorepo. Las reglas en este archivo ayudan a evitar que archivos temporales, 
+# dependencias, archivos de configuración sensibles y otros elementos no esenciales sean rastreados 
+# y compartidos en el repositorio. 
+
+# Es importante mantener este archivo actualizado a medida que el proyecto evoluciona y se incorporan
+# nuevas herramientas y dependencias. Los colaboradores deben consultar y actualizar este archivo 
+# antes de introducir nuevos tipos de archivos en el repositorio.
+
+# Cada entrada en este archivo es un patrón que corresponde a los archivos/carpetas que deben ser ignorados.
+# Los comentarios (líneas que comienzan con #) se utilizan para proporcionar claridad y contexto.
+
+# Estructura del Archivo:
+# - Dependencias: Archivos/directorios generados por gestores de paquetes.
+# - Archivos de Configuración y Entorno: Contiene información sensible o específica del entorno.
+# - Archivos de Logs: Archivos de registro que no necesitan ser compartidos.
+# - Directorios de Caché: Cachés generados por herramientas y dependencias.
+# - Directorios de Construcción: Resultados de compilación o construcción.
+# - Archivos del Sistema Operativo: Archivos específicos del sistema que no son relevantes para el proyecto.
+# - IDEs y Editores de Texto: Configuraciones específicas de editores de texto y entornos de desarrollo.
+# - Archivos Temporales o Locales: Archivos temporales generados durante el desarrollo.
+# - (Otros patrones específicos del proyecto)
+
+# Dependencias de node
+node_modules
+/node_modules
+
+# Archivos de configuracion y entorno
+config.js
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Archivos de logs
+*.log
+
+# Directorios de cache
+.cache/
+.npm
+
+# Directorios de construccion
+build/
+dist/
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Archivos de pruebas
+/coverage
+
+# IDEs y editores de texto
+.idea/
+.vscode/
+
+# Archivos temporales
+*.tmp
+*.temp
+*.swp
+*.swo
+*.bak
+
+# Herramientas especificas
+.babelrc
+.eslintcache
