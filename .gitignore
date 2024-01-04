@@ -22,9 +22,12 @@
 # - Archivos Temporales o Locales: Archivos temporales generados durante el desarrollo.
 # - (Otros patrones específicos del proyecto)
 
+# Para mas informacion https://help.github.com/articles/ignoring-files/
+
 # Dependencias de node
 node_modules
-/node_modules
+frontend/node_modules
+frontend/.pnp
 
 # Archivos de configuracion y entorno
 config.js
@@ -36,13 +39,16 @@ config.js
 
 # Archivos de logs
 *.log
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
 
 # Directorios de cache
 .cache/
 .npm
 
 # Directorios de construccion
-build/
+frontend/build/
 dist/
 
 # Archivos del sistema operativo
@@ -50,7 +56,7 @@ dist/
 Thumbs.db
 
 # Archivos de pruebas
-/coverage
+frontend/coverage
 
 # IDEs y editores de texto
 .idea/
