@@ -1,7 +1,7 @@
 {
   "name": "binario",
   "version": "1.0.0",
-  "description": "## Descripción",
+  "description": "Descripción",
   "type": "module",
   "main": "server.js",
   "scripts": {
