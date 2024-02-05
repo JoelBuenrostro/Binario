@@ -11,7 +11,7 @@ const HomeScreen = () => {
       { isLoading ? (
         <h2>Cargando...</h2>
       ) : error ? (
-        <div>{ error?.data?.message || error.error }</div>
+        <div>{ error?.data.message || error.error }</div>
       ) : (
         <>
           <h1>Ultimos productos</h1>
@@ -22,9 +22,10 @@ const HomeScreen = () => {
               </Col>
               ))}
           </Row>
-        </>) }
+        </>
+      ) }
     </>
-  )
-}
+  );
+};
 
 export default HomeScreen

@@ -25,7 +25,7 @@ const Product = ({ product }) => {
         </Card.Text>
       </Card.Body>
     </Card>
-  )
-}
+  );
+};
 
 export default Product
