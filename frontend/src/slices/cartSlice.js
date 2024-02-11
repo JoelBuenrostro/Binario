@@ -11,7 +11,7 @@ const cartSlice = createSlice({
   name: "cart",
   initialState,
   reducers: {
-    addToCart(state, action) => {
+    addToCart: (state, action) => {
       const item = action.payload;
 
       const existItem = state.cartItems.find((x) => x._id === item._id);
@@ -26,7 +26,7 @@ const cartSlice = createSlice({
 
       state.itemsPrice = addDecimals(state.cartItems.reduce((acc, item) => acc + item.price * item.qty, 0));
 
-      state.shippingPrice = adddecimals(state.itemsPrice > 100 ? 0 : 10);
+      state.shippingPrice = addDecimals(state.itemsPrice > 100 ? 0 : 10);
 
       state.taxPrice = addDecimals(Number((0.15 * state.itemsPrice).toFixed(2)));
 
