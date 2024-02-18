@@ -4,8 +4,9 @@
 
 * [Descripción](#descripción)
 * [Caracteristicas](#caracteristicas)
+* [Estructura del proyecto](#estructura-del-proyecto)
 * [Instalacion y uso](#instalacion-y-uso)
-* [Scripts Disponibles](#scripts-disponibles)
+* [Comandos Disponibles](#comandos-disponibles)
 * [Tecnologías Utilizadas](#tecnologías-utilizadas)
 * [Licencia](#licencia)
 
@@ -21,6 +22,24 @@ Este proyecto es una tienda de comercio electrónico especializada en equipo de 
 
 * Gestión de Carrito: Los usuarios pueden agregar productos a su carrito y gestionarlos con facilidad.
 
+## Estructura del proyecto
+
+```text
+/
+├── backend/
+│   └── data
+├── frontend/
+│   ├── public/
+│   ├── src/
+│   │   ├── assets/
+│   │   ├── components/
+│   │   ├── screens/
+│   │   ├── slices/
+│   │   ├── utils/
+├── upload/
+└── package.json
+```
+
 ## Instalacion y uso
 
 Para iniciar el proyecto, utiliza npm start. Para construir una versión de producción, ejecuta npm run build. Las pruebas se pueden realizar con npm test.
@@ -30,12 +49,14 @@ Para iniciar el proyecto, utiliza npm start. Para construir una versión de prod
 * Usa npm start para iniciar la aplicación en un servidor de desarrollo local.
 * Para construir la aplicación para producción, usa npm run build.
 
-## Scripts Disponibles
+## Comandos Disponibles
 
-start: Inicia el servidor express.
-server: Inicia el servidor en modo desarrollo.
-client: Inicia el servidor de la interfaz grafica del cliente.
-dev: Inicia el servidor de desarrollo del cliente y del servidor.
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `npm start`               | Inicia el servidor express.                      |
+| `npm run server`          | Inicia el servidor en modo desarrollo.           |
+| `npm run client`          | Inicia el servidor de la interfaz grafica del cliente. |
+| `npm run dev`             | Inicia el servidor de desarrollo del cliente y del servidor. |
 
 ## Tecnologías Utilizadas
 
