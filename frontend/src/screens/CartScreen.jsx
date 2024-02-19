@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Row, Col, ListGroup, Image, Form, Button, Card } from 'react-bootstrap';
 import { FaTrash } from 'react-icons/fa';
 import Message from '../components/Message'; 
+import { addToCart } from '../slices/cartSlice';
 
 const CartScreen = () => {
   const navigate = useNavigate();
@@ -10,6 +11,10 @@ const CartScreen = () => {
 
   const cart = useSelector((state) => state.cart);
   const { cartItems } = cart;
+
+  const addToCartHandler = async (product, qty) => {
+    dispatch(addToCart({...product, qty }));
+  }
 
   return <Row>
     <Col md={8}>
@@ -33,7 +38,7 @@ const CartScreen = () => {
                   ${item.price}
                 </Col>
                 <Col md={2}>
-                  <Form.Control as='select' value={item.qty} onChange={(e) => {}}>
+                  <Form.Control as='select' value={item.qty} onChange={(e) => addToCartHandler(item, Number(e.target.value))}>
                     {[...Array(item.countInStock).keys()].map((x) => (
                       <option key={x + 1} value={x + 1}>
                         {x + 1}
@@ -41,11 +46,31 @@ const CartScreen = () => {
                     ))}
                   </Form.Control>
                 </Col>
+                <Col md={2}>
+                  <Button type='button' variant='light' onClick={() => {}}>
+                    <FaTrash />
+                  </Button>
+                </Col>
               </Row>
             </ListGroup.Item>
           ))}
         </ListGroup>
       )}
+    </Col>
+    <Col md={4}>
+      <Card>
+        <ListGroup variant='flush'>
+          <ListGroup.Item>
+            <h2>Subtotal ({cartItems.reduce((acc, item) => acc + item.qty, 0)}) articulos</h2>
+            ${cartItems.reduce((acc, item) => acc + item.qty * item.price, 0).toFixed(2)}
+          </ListGroup.Item>
+          <ListGroup.Item>
+            <Button type='button' className='btn-block' disabled={cartItems.length === 0} onClick={() => navigate('/login')}>
+              Proceder a pagar
+            </Button>
+          </ListGroup.Item>
+        </ListGroup>
+      </Card>
     </Col>
   </Row>
 }
