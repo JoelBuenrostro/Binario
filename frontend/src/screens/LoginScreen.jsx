@@ -17,7 +17,7 @@ const LoginScreen = () => {
       <h1>Inicia sesion</h1>
 
       <Form onSubmit={submitHandler}>
-        <Form.Group controlId='email'>
+        <Form.Group controlId='email' className='my-3'>
           <Form.Label>Email</Form.Label>
           <Form.Control
             type='email'
@@ -27,7 +27,7 @@ const LoginScreen = () => {
           ></Form.Control>
         </Form.Group>
 
-        <Form.Group controlId='password'>
+        <Form.Group controlId='password' className='my-3'>
           <Form.Label>Contraseña</Form.Label>
           <Form.Control
             type='password'
@@ -37,7 +37,7 @@ const LoginScreen = () => {
           ></Form.Control>
         </Form.Group>
 
-        <Button type='submit' variant='primary'>
+        <Button type='submit' variant='primary' className='mt-3'>
           Iniciar sesion
         </Button>
       </Form>
@@ -46,7 +46,7 @@ const LoginScreen = () => {
         <Col>
           ¿Eres nuevo?
           <Link to={'/register'}>
-            Registrate
+             Registrate
           </Link>
         </Col>
       </Row>
