@@ -45,6 +45,7 @@ Este proyecto es una tienda de comercio electrónico especializada en equipo de 
 Para iniciar el proyecto, utiliza npm start. Para construir una versión de producción, ejecuta npm run build. Las pruebas se pueden realizar con npm test.
 
 * Clona el repositorio.
+* Crear archivo .env en base a .env.example
 * Ejecuta npm install para instalar las dependencias.
 * Usa npm start para iniciar la aplicación en un servidor de desarrollo local.
 * Para construir la aplicación para producción, usa npm run build.
