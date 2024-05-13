@@ -1,6 +1,5 @@
 const products = [
   {
-    _id: '1',
     name: 'Auriculares Bluetooth inalámbricos Airpods',
     image: '/images/airpods.jpg',
     description:
@@ -13,7 +12,6 @@ const products = [
     numReviews: 12,
   },
   {
-    _id: '2',
     name: 'iPhone 11 Pro con memoria de 256GB',
     image: '/images/phone.jpg',
     description:
@@ -26,7 +24,6 @@ const products = [
     numReviews: 8,
   },
   {
-    _id: '3',
     name: 'Cámara DSLR Canon EOS 80D',
     image: '/images/camera.jpg',
     description:
@@ -39,7 +36,6 @@ const products = [
     numReviews: 12,
   },
   {
-    _id: '4',
     name: 'Sony Playstation 4 Pro Versión Blanca',
     image: '/images/playstation.jpg',
     description:
@@ -52,7 +48,6 @@ const products = [
     numReviews: 12,
   },
   {
-    _id: '5',
     name: 'Ratón para juegos de la serie G de Logitech',
     image: '/images/mouse.jpg',
     description:
@@ -65,7 +60,6 @@ const products = [
     numReviews: 10,
   },
   {
-    _id: '6',
     name: 'Amazon Echo Dot 3ra Generación',
     image: '/images/alexa.jpg',
     description:
@@ -78,7 +72,6 @@ const products = [
     numReviews: 12,
   },
   {
-    _id: '7',
     name: 'iPhone 13 Pro Memoria 256GB',
     image: '/images/phone13.jpg',
     description:
@@ -91,7 +84,6 @@ const products = [
     numReviews: 8,
   },
   {
-    _id: '8',
     name: 'Sony Playstation 5',
     image: '/images/playstation5.jpg',
     description:

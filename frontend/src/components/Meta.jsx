@@ -12,7 +12,7 @@ const Meta = ({ title, description, keywords }) => {
 
 Meta.defaultProps = {
   title: 'Bienvenido a Binario',
-  description: 'We sell the best products for cheap',
+  description: 'Tene os los mejores productos de computo y electronica en un solo lugar',
   keywords: 'electronicos, compra electronicos',
 };
 
